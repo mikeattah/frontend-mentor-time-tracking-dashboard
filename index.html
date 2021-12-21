@@ -1,80 +1,192 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+<html class="hydrated" lang="en-US">
+  <head>
+    <!-- Character Set -->
+    <meta charset="UTF-8" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Time tracking dashboard</title>
+    <!-- displays site properly based on user's device -->
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,maximum-scale=2"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="HandheldFriendly" content="true" />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  Report for
-  Jeremy Robson
+    <!-- My personal font awesome 5 kit -->
+    <script
+      src="https://kit.fontawesome.com/ddc4c3e78e.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Ion Icons -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
 
-  Daily
-  Weekly
-  Monthly
+    <title>Frontend Mentor | Time Tracking Dashboard</title>
 
-  Work
-  5hrs <!-- daily -->
-  Previous - 7hrs <!-- daily -->
-  32hrs <!-- weekly -->
-  Previous - 36hrs <!-- weekly -->
-  103hrs <!-- monthly -->
-  Previous - 128hrs <!-- monthly -->
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&family=Roboto:wght@400&family=Montserrat:wght@400&display=swap"
+      rel="stylesheet"
+    />
 
-  Play
-  1hr <!-- daily -->
-  Previous - 2hrs <!-- daily -->
-  10hrs <!-- weekly -->
-  Previous - 8hrs <!-- weekly -->
-  23hrs <!-- monthly -->
-  Previous - 29hrs <!-- monthly -->
-
-  Study
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 7hrs <!-- weekly -->
-  13hrs <!-- monthly -->
-  Previous - 19hrs <!-- monthly -->
-
-  Exercise
-  1hr <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 5hrs <!-- weekly -->
-  11hrs <!-- monthly -->
-  Previous - 18hrs <!-- monthly -->
-
-  Social
-  1hr <!-- daily -->
-  Previous - 3hrs <!-- daily -->
-  5hrs <!-- weekly -->
-  Previous - 10hrs <!-- weekly -->
-  21hrs <!-- monthly -->
-  Previous - 23hrs <!-- monthly -->
-
-  Self Care
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  2hrs <!-- weekly -->
-  Previous - 2hrs <!-- weekly -->
-  7hrs <!-- monthly -->
-  Previous - 11hrs <!-- monthly -->
-
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <main class="main-container">
+        <div class="profile-container">
+          <div class="profile">
+            <div class="profile-image">
+              <img src="./images/image-jeremy.png" alt="Jeremy" />
+            </div>
+            <span class="report-text">Report for</span>
+            <p class="profile-name">Jeremy Robson</p>
+          </div>
+          <div class="schedule">
+            <a class="schedule-links">Daily</a>
+            <a class="schedule-links">Weekly</a>
+            <a class="schedule-links">Monthly</a>
+          </div>
+        </div>
+        <div class="schedule-container">
+          <div id="work" class="work">
+            <div class="work-top">
+              <img src="./images/icon-work.svg" alt="work" class="work-image" />
+            </div>
+            <div class="work-bot">
+              <div class="work-bot-a">
+                <span class="work-text">Work</span>
+                <i class="icon"></i>
+              </div>
+              <div class="work-bot-b">
+                <span id="work-current" class="work-current"></span>
+                <span id="work-previous" class="work-previous"></span>
+              </div>
+            </div>
+          </div>
+          <div id="play" class="play">
+            <div class="play-top">
+              <img src="./images/icon-play.svg" alt="play" class="play-image" />
+            </div>
+            <div class="play-bot">
+              <div class="play-bot-a">
+                <span class="play-text">Play</span>
+                <i class="icon"></i>
+              </div>
+              <div class="play-bot-b">
+                <span id="play-current" class="play-current"></span>
+                <span id="play-previous" class="play-previous"></span>
+              </div>
+            </div>
+          </div>
+          <div id="study" class="study">
+            <div class="study-top">
+              <img
+                src="./images/icon-study.svg"
+                alt="study"
+                class="study-image"
+              />
+            </div>
+            <div class="study-bot">
+              <div class="study-bot-a">
+                <span class="study-text">Study</span>
+                <i class="icon"></i>
+              </div>
+              <div class="study-bot-b">
+                <span id="study-current" class="study-current"></span>
+                <span id="study-previous" class="study-previous"></span>
+              </div>
+            </div>
+          </div>
+          <div id="exercise" class="exercise">
+            <div class="exercise-top">
+              <img
+                src="./images/icon-exercise.svg"
+                alt="exercise"
+                class="exercise-image"
+              />
+            </div>
+            <div class="exercise-bot">
+              <div class="exercise-bot-a">
+                <span class="exercise-text">Exercise</span>
+                <i class="icon"></i>
+              </div>
+              <div class="exercise-bot-b">
+                <span id="exercise-current" class="exercise-current"></span>
+                <span id="exercise-previous" class="exercise-previous"></span>
+              </div>
+            </div>
+          </div>
+          <div id="social" class="social">
+            <div class="social-top">
+              <img
+                src="./images/icon-social.svg"
+                alt="social"
+                class="social-image"
+              />
+            </div>
+            <div class="social-bot">
+              <div class="social-bot-a">
+                <span class="social-text">Social</span>
+                <i class="icon"></i>
+              </div>
+              <div class="social-bot-b">
+                <span id="social-current" class="social-current"></span>
+                <span id="social-previous" class="social-previous"></span>
+              </div>
+            </div>
+          </div>
+          <div id="self-care" class="self-care">
+            <div class="self-care-top">
+              <img
+                src="./images/icon-self-care.svg"
+                alt="self care"
+                class="self-care-image"
+              />
+            </div>
+            <div class="self-care-bot">
+              <div class="self-care-bot-a">
+                <span class="self-care-text">Self-Care</span>
+                <i class="icon"></i>
+              </div>
+              <div class="self-care-bot-b">
+                <span id="self-care-current" class="self-care-current"></span>
+                <span id="self-care-previous" class="self-care-previous"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <div class="attribution-container">
+        <p class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by
+          <a href="https://twitter.com/miikeattah" target="_blank">Mike Attah</a
+          >.
+        </p>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
 </html>
