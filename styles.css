@@ -1,5 +1,15 @@
 :root {
-  --color-name-number: #fff;
+  --color-blue: hsl(246, 80%, 60%);
+  --color-very-light-red: hsl(15, 100%, 70%); /* work */
+  --color-soft-blue: hsl(195, 74%, 62%); /* play */
+  --color-light-red: hsl(348, 100%, 68%); /* study */
+  --color-lime-green: hsl(145, 58%, 55%); /* exercise */
+  --color-violet: hsl(264, 64%, 52%); /* social */
+  --color-soft-orange: hsl(43, 84%, 65%); /* self care */
+  --color-very-dark-blue: hsl(226, 43%, 10%);
+  --color-dark-blue: hsl(235, 46%, 20%);
+  --color-desaturated-blue: hsl(235, 45%, 61%);
+  --color-pale-blue: hsl(236, 100%, 87%);
 }
 
 * {
@@ -11,6 +21,7 @@ body {
   margin: 0;
   padding: 0;
   font-size: 100%;
+  font-family: "Rubik", sans-serif;
 }
 
 .container {
@@ -18,7 +29,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   max-width: 100vw;
   margin: 0;
   padding: 0;
@@ -29,47 +40,116 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  height: 97vh;
+  min-height: 97vh;
   width: 100%;
+  background-color: var(--color-very-dark-blue);
   margin: 0;
   padding: 0;
 }
 
 .profile-container {
-  height: 500px;
-  width: 225px;
-  margin: 0 10px;
+  height: 480px;
+  min-width: 225px;
+  margin: 25px 10px;
   padding: 0;
+  border-radius: 15px;
+  background-color: var(--color-dark-blue);
 }
 
 .profile {
+  height: 70%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border-radius: 15px;
+  background-color: var(--color-blue);
+  margin: 0;
+  padding: 0 25px;
 }
 
 .profile-image {
+  height: 75px;
+  width: 75px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  margin: 25px 0 75px 0;
+  padding: 0;
 }
 
 .report-text {
+  color: var(--color-pale-blue);
+  margin: 0 0 5px 0;
+  padding: 0;
 }
 
 .profile-name {
+  color: white;
+  font-size: 36px;
+  font-weight: lighter;
+  margin: 0;
+  padding: 0;
 }
 
 .schedule {
+  height: 30%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 0;
+  padding: 0 25px;
 }
 
 .schedule-links {
+  color: var(--color-pale-blue);
+  margin: 8px 0;
+  padding: 0;
+}
+
+.schedule-links:hover,
+.schedule-links:active {
+  cursor: pointer;
+  color: white;
 }
 
 .schedule-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  height: 500px;
-  width: 750px;
-  margin: 0 10px;
+  min-height: 500px;
+  max-width: 900px;
+  min-width: 250px;
+  margin: 10px;
   padding: 0;
+}
+
+.work {
+  background-color: var(--color-very-light-red);
+}
+
+.play {
+  background-color: var(--color-soft-blue);
+}
+
+.study {
+  background-color: var(--color-light-red);
+}
+
+.exercise {
+  background-color: var(--color-lime-green);
+}
+
+.social {
+  background-color: var(--color-violet);
+}
+
+.self-care {
+  background-color: var(--color-soft-orange);
 }
 
 .work,
@@ -85,8 +165,7 @@ body {
   height: 225px;
   width: 225px;
   border-radius: 15px;
-  border: 1px solid #000;
-  margin: 10px;
+  margin: 15px;
   padding: 0;
 }
 
@@ -113,8 +192,9 @@ body {
 .social-image,
 .self-care-image {
   transform: scale(0.75);
-  filter: grayscale(100%);
+  filter: contrast(100%);
   opacity: 0.6;
+  z-index: 1;
 }
 
 .work-bot,
@@ -125,10 +205,20 @@ body {
 .self-care-bot {
   height: 80%;
   width: 100%;
-  border: 1px solid #000;
   border-radius: 15px;
+  background-color: var(--color-dark-blue);
   margin: 0;
   padding: 0;
+  z-index: 2;
+}
+
+.work-bot:hover,
+.play-bot:hover,
+.study-bot:hover,
+.exercise-bot:hover,
+.social-bot:hover,
+.self-care-bot:hover {
+  cursor: pointer;
 }
 
 .work-bot-a,
@@ -137,6 +227,16 @@ body {
 .exercise-bot-a,
 .social-bot-a,
 .self-care-bot-a {
+  height: 20%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+  padding: 0 25px;
 }
 
 .work-text,
@@ -145,9 +245,16 @@ body {
 .exercise-text,
 .social-text,
 .self-care-text {
+  color: white;
 }
 
 .icon {
+  color: white;
+}
+
+.icon:hover {
+  cursor: pointer;
+  color: var(--color-pale-blue);
 }
 
 .work-bot-b,
@@ -156,6 +263,14 @@ body {
 .exercise-bot-b,
 .social-bot-b,
 .self-care-bot-b {
+  height: 80%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  margin: 0;
+  padding: 0 25px;
 }
 
 .work-current,
@@ -164,6 +279,11 @@ body {
 .exercise-current,
 .social-current,
 .self-care-current {
+  color: white;
+  font-size: 45px;
+  font-weight: lighter;
+  margin: 0;
+  padding: 0 0 10px 0;
 }
 
 .work-previous,
@@ -172,6 +292,11 @@ body {
 .exercise-previous,
 .social-previous,
 .self-care-previous {
+  color: var(--color-pale-blue);
+  font-size: 16px;
+  font-weight: 100;
+  margin: 0;
+  padding: 0 0 20px 0;
 }
 
 .attribution-container {
@@ -199,6 +324,15 @@ body {
 }
 
 @media screen and (max-width: 900px) {
+  .main-container {
+    justify-content: center;
+    align-items: flex-start;
+    /* padding: 0 50px; */
+  }
+
+  .schedule-container {
+    justify-content: center;
+  }
 }
 
 @media screen and (max-width: 600px) {

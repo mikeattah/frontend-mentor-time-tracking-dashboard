@@ -25,12 +25,6 @@
       src="https://kit.fontawesome.com/ddc4c3e78e.js"
       crossorigin="anonymous"
     ></script>
-    <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- Bootstrap -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <!-- Popper JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <!-- Ion Icons -->
     <script
       type="module"
@@ -43,7 +37,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&family=Roboto:wght@400&family=Montserrat:wght@400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&family=Roboto:wght@400&family=Montserrat:wght@400&family=Rubik:wght@300&display=swap"
       rel="stylesheet"
     />
 
@@ -55,16 +49,36 @@
       <main class="main-container">
         <div class="profile-container">
           <div class="profile">
-            <div class="profile-image">
-              <img src="./images/image-jeremy.png" alt="Jeremy" />
-            </div>
+            <img
+              src="./images/image-jeremy.png"
+              alt="Jeremy"
+              class="profile-image"
+            />
             <span class="report-text">Report for</span>
-            <p class="profile-name">Jeremy Robson</p>
+            <p class="profile-name">
+              Jeremy <br />
+              Robson
+            </p>
           </div>
           <div class="schedule">
-            <a class="schedule-links">Daily</a>
-            <a class="schedule-links">Weekly</a>
-            <a class="schedule-links">Monthly</a>
+            <a
+              href="javascript:void(0);"
+              class="schedule-links"
+              onclick="selectSchedule(Daily)"
+              >Daily</a
+            >
+            <a
+              href="javascript:void(0);"
+              class="schedule-links"
+              onclick="selectSchedule(Weekly)"
+              >Weekly</a
+            >
+            <a
+              href="javascript:void(0);"
+              class="schedule-links"
+              onclick="selectSchedule(Monthly)"
+              >Monthly</a
+            >
           </div>
         </div>
         <div class="schedule-container">
@@ -75,11 +89,13 @@
             <div class="work-bot">
               <div class="work-bot-a">
                 <span class="work-text">Work</span>
-                <i class="icon"></i>
+                <i class="fas fa-ellipsis-h icon"></i>
               </div>
               <div class="work-bot-b">
-                <span id="work-current" class="work-current"></span>
-                <span id="work-previous" class="work-previous"></span>
+                <span id="work-current" class="work-current">32hrs</span>
+                <span id="work-previous" class="work-previous"
+                  >Last Week - 36hrs</span
+                >
               </div>
             </div>
           </div>
@@ -90,11 +106,13 @@
             <div class="play-bot">
               <div class="play-bot-a">
                 <span class="play-text">Play</span>
-                <i class="icon"></i>
+                <i class="fas fa-ellipsis-h icon"></i>
               </div>
               <div class="play-bot-b">
-                <span id="play-current" class="play-current"></span>
-                <span id="play-previous" class="play-previous"></span>
+                <span id="play-current" class="play-current">10hrs</span>
+                <span id="play-previous" class="play-previous"
+                  >Last Week - 8hrs</span
+                >
               </div>
             </div>
           </div>
@@ -109,11 +127,13 @@
             <div class="study-bot">
               <div class="study-bot-a">
                 <span class="study-text">Study</span>
-                <i class="icon"></i>
+                <i class="fas fa-ellipsis-h icon"></i>
               </div>
               <div class="study-bot-b">
-                <span id="study-current" class="study-current"></span>
-                <span id="study-previous" class="study-previous"></span>
+                <span id="study-current" class="study-current">4hrs</span>
+                <span id="study-previous" class="study-previous"
+                  >Last Week - 7hrs</span
+                >
               </div>
             </div>
           </div>
@@ -128,11 +148,13 @@
             <div class="exercise-bot">
               <div class="exercise-bot-a">
                 <span class="exercise-text">Exercise</span>
-                <i class="icon"></i>
+                <i class="fas fa-ellipsis-h icon"></i>
               </div>
               <div class="exercise-bot-b">
-                <span id="exercise-current" class="exercise-current"></span>
-                <span id="exercise-previous" class="exercise-previous"></span>
+                <span id="exercise-current" class="exercise-current">4hrs</span>
+                <span id="exercise-previous" class="exercise-previous"
+                  >Last Week - 5hrs</span
+                >
               </div>
             </div>
           </div>
@@ -147,11 +169,13 @@
             <div class="social-bot">
               <div class="social-bot-a">
                 <span class="social-text">Social</span>
-                <i class="icon"></i>
+                <i class="fas fa-ellipsis-h icon"></i>
               </div>
               <div class="social-bot-b">
-                <span id="social-current" class="social-current"></span>
-                <span id="social-previous" class="social-previous"></span>
+                <span id="social-current" class="social-current">5hrs</span>
+                <span id="social-previous" class="social-previous"
+                  >Last Week - 10hrs</span
+                >
               </div>
             </div>
           </div>
@@ -165,12 +189,16 @@
             </div>
             <div class="self-care-bot">
               <div class="self-care-bot-a">
-                <span class="self-care-text">Self-Care</span>
-                <i class="icon"></i>
+                <span class="self-care-text">Self Care</span>
+                <i class="fas fa-ellipsis-h icon"></i>
               </div>
               <div class="self-care-bot-b">
-                <span id="self-care-current" class="self-care-current"></span>
-                <span id="self-care-previous" class="self-care-previous"></span>
+                <span id="self-care-current" class="self-care-current"
+                  >2hrs</span
+                >
+                <span id="self-care-previous" class="self-care-previous"
+                  >Last Week - 2hrs</span
+                >
               </div>
             </div>
           </div>
