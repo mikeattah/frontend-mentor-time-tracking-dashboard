@@ -54,29 +54,29 @@
               alt="Jeremy"
               class="profile-image"
             />
-            <span class="report-text">Report for</span>
-            <p class="profile-name">
-              Jeremy <br />
-              Robson
-            </p>
+            <div class="profile-text">
+              <span class="profile-text-one">Report for</span>
+              <p class="profile-text-two">Jeremy Robson</p>
+            </div>
           </div>
           <div class="schedule">
             <a
               href="javascript:void(0);"
               class="schedule-links"
-              onclick="selectSchedule(Daily)"
+              onclick="selectSchedule('Daily')"
               >Daily</a
             >
             <a
               href="javascript:void(0);"
               class="schedule-links"
-              onclick="selectSchedule(Weekly)"
+              onclick="selectSchedule('Weekly')"
+              id="initially-active"
               >Weekly</a
             >
             <a
               href="javascript:void(0);"
               class="schedule-links"
-              onclick="selectSchedule(Monthly)"
+              onclick="selectSchedule('Monthly')"
               >Monthly</a
             >
           </div>
