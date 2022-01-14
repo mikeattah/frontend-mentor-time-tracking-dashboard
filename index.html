@@ -45,178 +45,173 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="container">
-      <main class="main-container">
-        <div class="profile-container">
-          <div class="profile">
-            <img
-              src="./images/image-jeremy.png"
-              alt="Jeremy"
-              class="profile-image"
-            />
-            <div class="profile-text">
-              <span class="profile-text-one">Report for</span>
-              <p class="profile-text-two">Jeremy Robson</p>
-            </div>
-          </div>
-          <div class="schedule">
-            <a
-              href="javascript:void(0);"
-              class="schedule-links"
-              onclick="selectSchedule('Daily')"
-              id="daily-schedule"
-              >Daily</a
-            >
-            <a
-              href="javascript:void(0);"
-              class="schedule-links"
-              onclick="selectSchedule('Weekly')"
-              id="weekly-schedule"
-              >Weekly</a
-            >
-            <a
-              href="javascript:void(0);"
-              class="schedule-links"
-              onclick="selectSchedule('Monthly')"
-              id="monthly-schedule"
-              >Monthly</a
-            >
+    <main class="main-container" role="main">
+      <div class="profile-container">
+        <div class="profile">
+          <img
+            src="./images/image-jeremy.png"
+            alt="Jeremy"
+            class="profile-image"
+          />
+          <div class="profile-text">
+            <span class="profile-text-one">Report for</span>
+            <h1 class="profile-text-two">Jeremy Robson</h1>
           </div>
         </div>
-        <div class="schedule-container">
-          <div id="work" class="work">
-            <div class="work-top">
-              <img src="./images/icon-work.svg" alt="work" class="work-image" />
-            </div>
-            <div class="work-bot">
-              <div class="work-bot-a">
-                <span class="work-text">Work</span>
-                <i class="fas fa-ellipsis-h icon"></i>
-              </div>
-              <div class="work-bot-b">
-                <span id="work-current" class="work-current">32hrs</span>
-                <span id="work-previous" class="work-previous"
-                  >Last Week - 36hrs</span
-                >
-              </div>
-            </div>
-          </div>
-          <div id="play" class="play">
-            <div class="play-top">
-              <img src="./images/icon-play.svg" alt="play" class="play-image" />
-            </div>
-            <div class="play-bot">
-              <div class="play-bot-a">
-                <span class="play-text">Play</span>
-                <i class="fas fa-ellipsis-h icon"></i>
-              </div>
-              <div class="play-bot-b">
-                <span id="play-current" class="play-current">10hrs</span>
-                <span id="play-previous" class="play-previous"
-                  >Last Week - 8hrs</span
-                >
-              </div>
-            </div>
-          </div>
-          <div id="study" class="study">
-            <div class="study-top">
-              <img
-                src="./images/icon-study.svg"
-                alt="study"
-                class="study-image"
-              />
-            </div>
-            <div class="study-bot">
-              <div class="study-bot-a">
-                <span class="study-text">Study</span>
-                <i class="fas fa-ellipsis-h icon"></i>
-              </div>
-              <div class="study-bot-b">
-                <span id="study-current" class="study-current">4hrs</span>
-                <span id="study-previous" class="study-previous"
-                  >Last Week - 7hrs</span
-                >
-              </div>
-            </div>
-          </div>
-          <div id="exercise" class="exercise">
-            <div class="exercise-top">
-              <img
-                src="./images/icon-exercise.svg"
-                alt="exercise"
-                class="exercise-image"
-              />
-            </div>
-            <div class="exercise-bot">
-              <div class="exercise-bot-a">
-                <span class="exercise-text">Exercise</span>
-                <i class="fas fa-ellipsis-h icon"></i>
-              </div>
-              <div class="exercise-bot-b">
-                <span id="exercise-current" class="exercise-current">4hrs</span>
-                <span id="exercise-previous" class="exercise-previous"
-                  >Last Week - 5hrs</span
-                >
-              </div>
-            </div>
-          </div>
-          <div id="social" class="social">
-            <div class="social-top">
-              <img
-                src="./images/icon-social.svg"
-                alt="social"
-                class="social-image"
-              />
-            </div>
-            <div class="social-bot">
-              <div class="social-bot-a">
-                <span class="social-text">Social</span>
-                <i class="fas fa-ellipsis-h icon"></i>
-              </div>
-              <div class="social-bot-b">
-                <span id="social-current" class="social-current">5hrs</span>
-                <span id="social-previous" class="social-previous"
-                  >Last Week - 10hrs</span
-                >
-              </div>
-            </div>
-          </div>
-          <div id="self-care" class="self-care">
-            <div class="self-care-top">
-              <img
-                src="./images/icon-self-care.svg"
-                alt="self care"
-                class="self-care-image"
-              />
-            </div>
-            <div class="self-care-bot">
-              <div class="self-care-bot-a">
-                <span class="self-care-text">Self Care</span>
-                <i class="fas fa-ellipsis-h icon"></i>
-              </div>
-              <div class="self-care-bot-b">
-                <span id="self-care-current" class="self-care-current"
-                  >2hrs</span
-                >
-                <span id="self-care-previous" class="self-care-previous"
-                  >Last Week - 2hrs</span
-                >
-              </div>
-            </div>
-          </div>
+        <div class="schedule">
+          <a
+            href="javascript:void(0);"
+            class="schedule-links"
+            onclick="selectSchedule('Daily')"
+            id="daily-schedule"
+            >Daily</a
+          >
+          <a
+            href="javascript:void(0);"
+            class="schedule-links"
+            onclick="selectSchedule('Weekly')"
+            id="weekly-schedule"
+            >Weekly</a
+          >
+          <a
+            href="javascript:void(0);"
+            class="schedule-links"
+            onclick="selectSchedule('Monthly')"
+            id="monthly-schedule"
+            >Monthly</a
+          >
         </div>
-      </main>
-      <div class="attribution-container">
-        <p class="attribution">
-          Challenge by
-          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-            >Frontend Mentor</a
-          >. Coded by
-          <a href="https://twitter.com/miikeattah" target="_blank">Mike Attah</a
-          >.
-        </p>
       </div>
-    </div>
+      <div class="schedule-container">
+        <div id="work" class="work">
+          <div class="work-top">
+            <img src="./images/icon-work.svg" alt="work" class="work-image" />
+          </div>
+          <div class="work-bot">
+            <div class="work-bot-a">
+              <span class="work-text">Work</span>
+              <i class="fas fa-ellipsis-h icon"></i>
+            </div>
+            <div class="work-bot-b">
+              <span id="work-current" class="work-current">32hrs</span>
+              <span id="work-previous" class="work-previous"
+                >Last Week - 36hrs</span
+              >
+            </div>
+          </div>
+        </div>
+        <div id="play" class="play">
+          <div class="play-top">
+            <img src="./images/icon-play.svg" alt="play" class="play-image" />
+          </div>
+          <div class="play-bot">
+            <div class="play-bot-a">
+              <span class="play-text">Play</span>
+              <i class="fas fa-ellipsis-h icon"></i>
+            </div>
+            <div class="play-bot-b">
+              <span id="play-current" class="play-current">10hrs</span>
+              <span id="play-previous" class="play-previous"
+                >Last Week - 8hrs</span
+              >
+            </div>
+          </div>
+        </div>
+        <div id="study" class="study">
+          <div class="study-top">
+            <img
+              src="./images/icon-study.svg"
+              alt="study"
+              class="study-image"
+            />
+          </div>
+          <div class="study-bot">
+            <div class="study-bot-a">
+              <span class="study-text">Study</span>
+              <i class="fas fa-ellipsis-h icon"></i>
+            </div>
+            <div class="study-bot-b">
+              <span id="study-current" class="study-current">4hrs</span>
+              <span id="study-previous" class="study-previous"
+                >Last Week - 7hrs</span
+              >
+            </div>
+          </div>
+        </div>
+        <div id="exercise" class="exercise">
+          <div class="exercise-top">
+            <img
+              src="./images/icon-exercise.svg"
+              alt="exercise"
+              class="exercise-image"
+            />
+          </div>
+          <div class="exercise-bot">
+            <div class="exercise-bot-a">
+              <span class="exercise-text">Exercise</span>
+              <i class="fas fa-ellipsis-h icon"></i>
+            </div>
+            <div class="exercise-bot-b">
+              <span id="exercise-current" class="exercise-current">4hrs</span>
+              <span id="exercise-previous" class="exercise-previous"
+                >Last Week - 5hrs</span
+              >
+            </div>
+          </div>
+        </div>
+        <div id="social" class="social">
+          <div class="social-top">
+            <img
+              src="./images/icon-social.svg"
+              alt="social"
+              class="social-image"
+            />
+          </div>
+          <div class="social-bot">
+            <div class="social-bot-a">
+              <span class="social-text">Social</span>
+              <i class="fas fa-ellipsis-h icon"></i>
+            </div>
+            <div class="social-bot-b">
+              <span id="social-current" class="social-current">5hrs</span>
+              <span id="social-previous" class="social-previous"
+                >Last Week - 10hrs</span
+              >
+            </div>
+          </div>
+        </div>
+        <div id="self-care" class="self-care">
+          <div class="self-care-top">
+            <img
+              src="./images/icon-self-care.svg"
+              alt="self care"
+              class="self-care-image"
+            />
+          </div>
+          <div class="self-care-bot">
+            <div class="self-care-bot-a">
+              <span class="self-care-text">Self Care</span>
+              <i class="fas fa-ellipsis-h icon"></i>
+            </div>
+            <div class="self-care-bot-b">
+              <span id="self-care-current" class="self-care-current">2hrs</span>
+              <span id="self-care-previous" class="self-care-previous"
+                >Last Week - 2hrs</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="attribution-container">
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://twitter.com/miikeattah" target="_blank">Mike Attah</a>.
+      </p>
+    </footer>
     <script src="index.js"></script>
   </body>
 </html>
