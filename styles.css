@@ -111,11 +111,22 @@ body {
 }
 
 .schedule-links {
-  color: var(--color-pale-blue);
   font-weight: 500;
   margin: 8px 0;
   padding: 0;
   text-decoration: none;
+}
+
+#daily-schedule {
+  color: var(--color-pale-blue);
+}
+
+#weekly-schedule {
+  color: #fff;
+}
+
+#monthly-schedule {
+  color: var(--color-pale-blue);
 }
 
 .schedule-links:hover,

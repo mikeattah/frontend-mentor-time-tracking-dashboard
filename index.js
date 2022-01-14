@@ -1,3 +1,7 @@
+const dailySchedule = document.querySelector("#daily-schedule");
+const weeklySchedule = document.querySelector("#weekly-schedule");
+const monthlySchedule = document.querySelector("#monthly-schedule");
+
 const workCurrent = document.querySelector("#work-current");
 const workPrevious = document.querySelector("#work-previous");
 
@@ -22,6 +26,10 @@ function selectSchedule(type) {
     .then((data) => {
       console.log(data);
       if (type === "Daily") {
+        dailySchedule.style.color = "#fff";
+        weeklySchedule.style.color = "hsl(236, 100%, 87%)";
+        monthlySchedule.style.color = "hsl(236, 100%, 87%)";
+
         workCurrent.textContent = data[0].timeframes.daily.current + "hrs";
         workPrevious.textContent =
           "Yesterday - " + data[0].timeframes.daily.previous + "hrs";
@@ -41,6 +49,10 @@ function selectSchedule(type) {
         selfCarePrevious.textContent =
           "Yesterday - " + data[5].timeframes.daily.previous + "hrs";
       } else if (type === "Weekly") {
+        weeklySchedule.style.color = "#fff";
+        dailySchedule.style.color = "hsl(236, 100%, 87%)";
+        monthlySchedule.style.color = "hsl(236, 100%, 87%)";
+
         workCurrent.textContent = data[0].timeframes.weekly.current + "hrs";
         workPrevious.textContent =
           "Last Week - " + data[0].timeframes.weekly.previous + "hrs";
@@ -60,6 +72,10 @@ function selectSchedule(type) {
         selfCarePrevious.textContent =
           "Last Week - " + data[5].timeframes.weekly.previous + "hrs";
       } else if (type === "Monthly") {
+        monthlySchedule.style.color = "#fff";
+        dailySchedule.style.color = "hsl(236, 100%, 87%)";
+        weeklySchedule.style.color = "hsl(236, 100%, 87%)";
+
         workCurrent.textContent = data[0].timeframes.monthly.current + "hrs";
         workPrevious.textContent =
           "Last Month - " + data[0].timeframes.monthly.previous + "hrs";
