@@ -48,6 +48,6 @@ I will continue to learn about how to use fetch API for getting, posting, patchi
 
 ## Author
 
-- Website - [Mike Attah](https://mikeattah.com)
+- Website - [mikeattah.com](https://mikeattah.com)
 - Frontend Mentor - [@mikeattah](https://www.frontendmentor.io/profile/mikeattah)
-- Twitter - [@mikeattahx](https://www.twitter.com/mikeattahx)
+- Twitter - [@mikeattahh](https://www.twitter.com/mikeattahh)
