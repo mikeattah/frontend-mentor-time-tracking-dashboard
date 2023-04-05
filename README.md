@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Frontend Mentor](https://your-solution-url.com)
-- Live Site URL: [GitHub Pages](https://mikeattah.github.io/time-tracking-dashboard/)
+- View Submission: [Frontend Mentor](https://www.frontendmentor.io/solutions/html5-css3-javascript-UJH-1WFHN)
+- View Site: [GitHub Pages](https://mikeattah.github.io/frontend-mentor-time-tracking-dashboard/)
 
 ## My process
 
@@ -48,6 +48,6 @@ I will continue to learn about how to use fetch API for getting, posting, patchi
 
 ## Author
 
-- Website - [mikeattah.com](https://mikeattah.com)
-- Frontend Mentor - [@mikeattah](https://www.frontendmentor.io/profile/mikeattah)
-- Twitter - [@mikeattahh](https://www.twitter.com/mikeattahh)
+- Website: [mikeattah.com](https://mikeattah.com)
+- Frontend Mentor: [@mikeattah](https://www.frontendmentor.io/profile/mikeattah)
+- Twitter: [@mikeattahh](https://www.twitter.com/mikeattahh)
